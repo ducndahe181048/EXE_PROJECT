@@ -16,6 +16,7 @@ const router = createBrowserRouter([
   },
   {
     path: '/auth',
+    Component: lazy(() => import('../layouts/homePageLayout')),
     children: [
       {
         path: 'register',
@@ -40,6 +41,28 @@ const router = createBrowserRouter([
       {
         path: '',
         Component: lazy(() => import('../app/quizzes/page'))
+      }
+    ]
+  },
+  {
+    path: "/home",
+    Component: lazy(() => import('../layouts/homePageLayout')),
+    children: [
+      {
+        index: true,
+        Component: lazy(() => import('../app/home/HomePage')),
+      },
+      {
+        path: 'about',
+        Component: lazy(() => import('../app/home/about/MainAboutUs'))
+      },
+      {
+        path: 'available',
+        Component: lazy(() => import('../app/home/available/AvailableBox'))
+      },
+      {
+        path: 'contact',
+        Component: lazy(() => import('../app/home/contact/ContactC'))
       }
     ]
   }
