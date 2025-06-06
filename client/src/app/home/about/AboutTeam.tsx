@@ -1,30 +1,67 @@
-import teamPic from "../../../assets/team1.jpg";
+import men1 from "../../../assets/2.png"
 
-const AboutTeam = () => {
+const teamMembers = [
+    {
+        name: 'Nguyễn Minh giang',
+        role: 'Chief Executing Officer (CEO)',
+        image: men1
+    },
+    {
+        name: 'Đồng Nhật Linh',
+        role: 'Chief Marketing Officer (CMO)',
+        image: men1
+    },
+    {
+        name: 'Vương Chí Nhật',
+        role: 'Chief Financial Officer (CFO)',
+        image: men1
+    },
+    {
+        name: 'Phan Hải Đăng',
+        role: 'Chief Operating Officer (COO)',
+        image: men1
+    },
+    {
+        name: 'Nguyễn Đình Anh Đức',
+        role: 'Chief Technology Officer (CTO)',
+        image: men1
+    },
+    {
+        name: 'Vũ Linh Trang',
+        role: 'Chief Product Officer (CPO)',
+        image: men1
+    },
+];
+
+const TeamSection = () => {
     return (
-        <section className="bg-white border border-gray-200 rounded-md mx-4 md:mx-10 my-10 overflow-hidden">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-0 items-center w-full">
-                {/* Text section */}
-                <div className="p-8 md:p-16">
-                    <h2 className="text-4xl font-serif text-gray-800 my-4">
-                        Gặp Gỡ Team Ribbon Box
-                    </h2>
-                    <button className="border border-[#AD3542] px-6 py-3 mt-6 text-sm font-black text-[#AD3542] hover:bg-[#AD3542] hover:text-white transition">
-                        GET TO KNOW US
-                    </button>
-                </div>
+        <div className="py-16 bg-white text-center text-black">
+            <h2 className="text-3xl font-bold mb-12">Gặp Gỡ Team Ribbon Box</h2>
 
-                {/* Image section */}
-                <div className="w-full h-full">
-                    <img
-                        src={teamPic}
-                        alt="Meet the Team"
-                        className="w-full h-full object-cover"
-                    />
-                </div>
+            <div className="flex justify-center">
+                <div className="w-16 h-1 bg-black mb-12"></div>
             </div>
-        </section>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 px-4 max-w-7xl mx-auto">
+                {teamMembers.map((member, index) => (
+                    <div
+                        key={index}
+                        className="bg-white shadow-md rounded-lg overflow-hidden"
+                    >
+                        <img
+                            src={member.image}
+                            alt={member.name}
+                            className="w-full h-[320px] object-cover"
+                        />
+                        <div className="py-4">
+                            <h3 className="font-bold text-gray-900">{member.name}</h3>
+                            <p className="text-sm text-gray-600">{member.role}</p>
+                        </div>
+                    </div>
+                ))}
+            </div>
+        </div>
     );
 };
 
-export default AboutTeam;
+export default TeamSection;
