@@ -13,8 +13,7 @@ import Palette from './Palette';
 import candle from '../../../assets/candle.svg';
 import hoa from '../../../assets/hoa.png';
 import card from '../../../assets/card.png';
-import Stepper from './StepDesign/Stepper';
-
+import cup from '../../../assets/cup.svg';
 
 const CELL_SIZE = 25;
 const GRID_WIDTH = 12;
@@ -41,7 +40,8 @@ interface Preview {
 const paletteItems: GridItem[] = [
     { id: 'item-1', width: 4, height: 4, row: 0, col: 0, rotation: 0, image: candle },
     { id: 'item-2', width: 4, height: 4, row: 0, col: 0, rotation: 0, image: hoa },
-    { id: 'item-3', width: 4, height: 4, row: 0, col: 0, rotation: 0, image: card }
+    { id: 'item-3', width: 4, height: 4, row: 0, col: 0, rotation: 0, image: card },
+    { id: 'item-4', width: 4, height: 4, row: 0, col: 0, rotation: 0, image: cup },
 ];
 
 const MainDrag = () => {

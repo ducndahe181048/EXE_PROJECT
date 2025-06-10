@@ -41,7 +41,7 @@ const Palette = ({ items }: PaletteProps) => {
                                     width: '100%',
                                     height: '100%',
                                     // objectFit: 'contain',
-                                    transform: 'scale(1)', // 👈 Phóng to
+                                    transform: 'scale(1.2)',
                                     // transformOrigin: 'center center',
                                     // transition: 'transform 0.2s ease'
                                 }}

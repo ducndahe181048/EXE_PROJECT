@@ -13,8 +13,8 @@ const Droppable: React.FC<DroppableProps> = ({ id, children }) => {
         <div
             ref={setNodeRef}
             style={{
-                width: 300,
-                height: 300,
+                width: 380,
+                height: 380,
                 display: 'grid',
                 gridTemplateColumns: 'repeat(12, 1fr)',
                 gridTemplateRows: 'repeat(12, 1fr)',
