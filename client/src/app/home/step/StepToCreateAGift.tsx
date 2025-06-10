@@ -1,3 +1,4 @@
+import { Link } from "react-router";
 import demo1 from "../../../assets/demo1.svg";
 import demo2 from "../../../assets/demo2.svg";
 import demo3 from "../../../assets/demo3.svg";
@@ -47,7 +48,9 @@ export default function StepToCreateAGiftBox() {
                 </div>
 
                 <button className="mt-16 px-10 py-4 rounded-full border border-black bg-[#FFFDF1] hover:bg-[#EDCCB3] transition font-semibold text-lg text-[#AD3542]">
-                    Bắt đầu tuỳ chỉnh hộp quà của bạn với Ribbon Box nhé
+                    <Link to={"/home/design"}>
+                        Bắt đầu tuỳ chỉnh hộp quà của bạn với Ribbon Box nhé
+                    </Link>
                 </button>
             </div>
         </section>

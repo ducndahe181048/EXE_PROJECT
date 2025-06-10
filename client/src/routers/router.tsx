@@ -63,6 +63,10 @@ const router = createBrowserRouter([
       {
         path: 'contact',
         Component: lazy(() => import('../app/home/contact/ContactC'))
+      },
+      {
+        path: 'design',
+        Component: lazy(() => import('../app/home/drag_and_drop/mainDrag'))
       }
     ]
   }
