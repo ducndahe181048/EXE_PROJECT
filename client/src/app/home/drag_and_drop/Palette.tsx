@@ -1,60 +1,3 @@
-// import { useDraggable } from '@dnd-kit/core';
-// import { GridItem } from './MainDrag';
-
-// const CELL_SIZE = 25;
-
-// interface PaletteProps {
-//     items: GridItem[];
-// }
-
-// const Palette = ({ items }: PaletteProps) => {
-//     return (
-//         <div style={{ display: 'flex', gap: 8, marginBottom: 16 }}>
-//             {items.map(item => {
-//                 const { attributes, listeners, setNodeRef } = useDraggable({
-//                     id: `palette-${item.id}`
-//                 });
-
-//                 return (
-//                     <div
-//                         key={item.id}
-//                         ref={setNodeRef}
-//                         {...attributes}
-//                         {...listeners}
-//                         style={{
-//                             width: item.width * CELL_SIZE,
-//                             height: item.height * CELL_SIZE,
-//                             // border: '1px solid #ccc',
-//                             position: 'relative',
-//                             cursor: 'grab',
-//                         }}
-//                     >
-//                         {item.image ? (
-//                             <img
-//                                 src={item.image}
-//                                 alt="palette-item"
-//                                 style={{
-//                                     width: '100%',
-//                                     height: '100%',
-//                                     objectFit: 'contain',
-//                                     transform: 'scale(3)', // 👈 Phóng to
-//                                     transformOrigin: 'center center',
-//                                     transition: 'transform 0.2s ease'
-//                                 }}
-//                             />
-//                         ) : (
-//                             <div style={{ backgroundColor: '#ddd', width: '100%', height: '100%' }} />
-//                         )}
-//                     </div>
-//                 );
-//             })}
-//         </div>
-//     );
-// };
-
-// export default Palette;
-
-
 import { useDraggable } from '@dnd-kit/core';
 import { GridItem } from './MainDrag';
 
@@ -66,20 +9,7 @@ interface PaletteProps {
 
 const Palette = ({ items }: PaletteProps) => {
     return (
-        <div
-            style={{
-                display: 'flex',
-                flexDirection: 'column',
-                // gap: 12,
-                // padding: 8,
-                backgroundColor: 'rgba(255,255,255,0.02)',
-                // border: '1px solid rgba(255,255,255,0.1)',
-                borderRadius: 8,
-                minWidth: 120
-            }}
-        >
-            <h4 style={{ margin: 0, color: '#fff', fontSize: 14 }}>Palette</h4>
-
+        <div style={{ display: 'flex', gap: 8, marginBottom: 16 }}>
             {items.map(item => {
                 const { attributes, listeners, setNodeRef } = useDraggable({
                     id: `palette-${item.id}`
@@ -92,13 +22,13 @@ const Palette = ({ items }: PaletteProps) => {
                         {...attributes}
                         {...listeners}
                         style={{
+                            display: 'flex',
+                            flexDirection: 'column',
                             width: item.width * CELL_SIZE,
                             height: item.height * CELL_SIZE,
-                            border: '1px solid rgba(255,255,255,0.1)',
-                            borderRadius: 4,
-                            overflow: 'hidden',
+                            // border: '1px solid #ccc',
+                            position: 'relative',
                             cursor: 'grab',
-                            backgroundColor: 'rgba(255,255,255,0.05)'
                         }}
                     >
                         {item.image ? (
@@ -106,20 +36,16 @@ const Palette = ({ items }: PaletteProps) => {
                                 src={item.image}
                                 alt="palette-item"
                                 style={{
-                                    transform: 'scale(1)',
                                     width: '100%',
                                     height: '100%',
-                                    objectFit: 'contain'
+                                    objectFit: 'contain',
+                                    transform: 'scale(3)', // 👈 Phóng to
+                                    transformOrigin: 'center center',
+                                    transition: 'transform 0.2s ease'
                                 }}
                             />
                         ) : (
-                            <div
-                                style={{
-                                    backgroundColor: '#ddd',
-                                    width: '100%',
-                                    height: '100%'
-                                }}
-                            />
+                            <div style={{ backgroundColor: '#ddd', width: '100%', height: '100%' }} />
                         )}
                     </div>
                 );
