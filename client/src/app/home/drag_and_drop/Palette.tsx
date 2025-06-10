@@ -22,6 +22,8 @@ const Palette = ({ items }: PaletteProps) => {
                         {...attributes}
                         {...listeners}
                         style={{
+                            border: '2px solid #d1d5db', 
+                            borderRadius: 6,
                             display: 'flex',
                             flexDirection: 'column',
                             width: item.width * CELL_SIZE,

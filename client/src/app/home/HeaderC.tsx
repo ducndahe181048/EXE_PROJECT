@@ -65,7 +65,7 @@ function Navigate() {
 
     const navItems = [
         { to: "/home", label: "Trang Chủ" },
-        { to: "/home/create", label: "Bắt Đầu Thiết Kế" },
+        { to: "/home/design", label: "Bắt Đầu Thiết Kế" },
         { to: "/home/available", label: "Hộp Quà Có Sẵn" },
         { to: "/home/about", label: "Về Chúng Tôi" },
         { to: "/home/Contact", label: "Contact" },

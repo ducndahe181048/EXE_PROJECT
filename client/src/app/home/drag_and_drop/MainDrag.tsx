@@ -229,6 +229,8 @@ const MainDrag = () => {
                     )}
                 </Droppable>
 
+
+
                 <DragOverlay adjustScale={false}>
                     {activeItem ? (
                         <img
