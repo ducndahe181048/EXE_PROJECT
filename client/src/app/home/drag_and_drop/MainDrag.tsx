@@ -13,6 +13,8 @@ import Palette from './Palette';
 import candle from '../../../assets/candle.svg';
 import hoa from '../../../assets/hoa.png';
 import card from '../../../assets/card.png';
+import Stepper from './StepDesign/Stepper';
+
 
 const CELL_SIZE = 25;
 const GRID_WIDTH = 12;
@@ -215,8 +217,11 @@ const MainDrag = () => {
                                 left: preview.col * CELL_SIZE,
                                 width: preview.width * CELL_SIZE,
                                 height: preview.height * CELL_SIZE,
-                                backgroundColor: 'rgba(0, 128, 255, 0.3)',
-                                border: '1px dashed #0077cc',
+                                backgroundColor: isValidPosition(preview, preview.id)
+                                    ? 'rgba(0, 128, 255, 0.3)'
+                                    : 'rgba(255, 0, 0, 0.2)',
+                                border: '1px dashed',
+                                borderColor: isValidPosition(preview, preview.id) ? '#0077cc' : 'red',
                                 pointerEvents: 'none',
                                 zIndex: 50
                             }}
@@ -233,7 +238,7 @@ const MainDrag = () => {
                                 width: activeItem.width * CELL_SIZE,
                                 height: activeItem.height * CELL_SIZE,
                                 objectFit: 'contain',
-                                transform: 'scale(1.2)',
+                                transform: 'scale(1)',
                                 pointerEvents: 'none'
                             }}
                         />

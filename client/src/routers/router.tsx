@@ -66,7 +66,7 @@ const router = createBrowserRouter([
       },
       {
         path: 'design',
-        Component: lazy(() => import('../app/home/drag_and_drop/mainDrag'))
+        Component: lazy(() => import('../app/home/drag_and_drop/MainDrag'))
       }
     ]
   }

@@ -38,7 +38,7 @@ const Draggable = ({ id, row, col, width, height, rotation, image, onRotate }: P
                         width: '100%',
                         height: '100%',
                         objectFit: 'contain',
-                        transform: 'scale(1.2)', // 👈 Phóng to
+                        // transform: 'scale(1.2)',
                         transformOrigin: 'center center',
                         transition: 'transform 0.2s ease'
                     }}

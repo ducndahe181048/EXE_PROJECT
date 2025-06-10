@@ -9,7 +9,7 @@ interface PaletteProps {
 
 const Palette = ({ items }: PaletteProps) => {
     return (
-        <div style={{ display: 'flex', gap: 8, marginBottom: 16 }}>
+        <div style={{ display: 'flex', gap: 0.1, marginBottom: 16 }}>
             {items.map(item => {
                 const { attributes, listeners, setNodeRef } = useDraggable({
                     id: `palette-${item.id}`
@@ -39,9 +39,9 @@ const Palette = ({ items }: PaletteProps) => {
                                     width: '100%',
                                     height: '100%',
                                     // objectFit: 'contain',
-                                    transform: 'scale(1.3)',
+                                    transform: 'scale(1)', // 👈 Phóng to
                                     // transformOrigin: 'center center',
-                                    transition: 'transform 0.2s ease'
+                                    // transition: 'transform 0.2s ease'
                                 }}
                             />
                         ) : (

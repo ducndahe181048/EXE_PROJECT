@@ -6,7 +6,7 @@ interface DroppableProps {
 }
 
 const Droppable: React.FC<DroppableProps> = ({ id, children }) => {
-    const { setNodeRef } = useDroppable({ id });
+    const { setNodeRef } = useDroppable({ id });    
 
     return (
         <div
@@ -28,7 +28,7 @@ const Droppable: React.FC<DroppableProps> = ({ id, children }) => {
                         width: '100%',
                         height: '100%',
                         backgroundColor: '#eee',
-                        border: '1px solid #ccc',
+                        border: '0.01px solid #ddd',
                         boxSizing: 'border-box'
                     }}
                 />
