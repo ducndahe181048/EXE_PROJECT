@@ -38,9 +38,9 @@ const Palette = ({ items }: PaletteProps) => {
                                 style={{
                                     width: '100%',
                                     height: '100%',
-                                    objectFit: 'contain',
-                                    transform: 'scale(3)', // 👈 Phóng to
-                                    transformOrigin: 'center center',
+                                    // objectFit: 'contain',
+                                    transform: 'scale(1.3)',
+                                    // transformOrigin: 'center center',
                                     transition: 'transform 0.2s ease'
                                 }}
                             />
